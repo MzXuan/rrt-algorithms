@@ -6,7 +6,7 @@ from src.rrt.rrt_star_bid import RRTStarBidirectional
 
 
 class RRTStarBidirectionalHeuristic(RRTStarBidirectional):
-    def __init__(self, X, Q, x_init, x_goal, max_samples, r, prc=0.01, rewire_count: int = None):
+    def __init__(self, X, Q, x_init, x_goal, max_samples, r, prc=0.01, rewire_count = None):
         """
         Bidirectional RRT* Search
         :param X: Search Space
@@ -18,7 +18,7 @@ class RRTStarBidirectionalHeuristic(RRTStarBidirectional):
         :param prc: probability of checking whether there is a solution
         :param rewire_count: number of nearby vertices to rewire
         """
-        super().__init__(X, Q, x_init, x_goal, max_samples, r, prc, rewire_count)
+        super(RRTStarBidirectionalHeuristic,self).__init__(X, Q, x_init, x_goal, max_samples, r, prc, rewire_count)
 
     def rrt_star_bid_h(self):
         """

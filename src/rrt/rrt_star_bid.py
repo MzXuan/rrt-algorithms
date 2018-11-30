@@ -20,7 +20,7 @@ class RRTStarBidirectional(RRTStar):
         :param prc: probability of checking whether there is a solution
         :param rewire_count: number of nearby vertices to rewire
         """
-        super().__init__(X, Q, x_init, x_goal, max_samples, r, prc, rewire_count)
+        super(RRTStarBidirectional,self).__init__(X, Q, x_init, x_goal, max_samples, r, prc, rewire_count)
         self.sigma_best = None  # best solution thus far
         self.swapped = False
 

@@ -40,6 +40,7 @@ class SearchSpace(object):
         else:
             self.obs = index.Index(obstacle_generator(O), interleaved=True, properties=p)
 
+
     def obstacle_free(self, x):
         """
         Check if a location resides inside of an obstacle
